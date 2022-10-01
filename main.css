@@ -1,0 +1,74 @@
+html { font-size: 22px; }
+body { padding: 1rem; }
+
+
+.sections {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1rem;
+  }
+
+.section {
+  background-color: dodgerblue;
+  color: white;
+  padding: 1rem;
+  height: 30rem;
+}
+
+/* start of navbar styling */
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+  
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+
+/* end of navbar styling */
+
+
+
+
+/* screens larger than 600 px */
+@media (min-width: 600px) {
+    .sections { grid-template-columns: repeat(2, 1fr); }
+  }
+
+
+/* for screens larger than  900 px */  
+  @media (min-width: 900px) {
+    .cards { grid-template-columns: repeat(3, 1fr); }
+  }
+
+
+/* To avoid media queries add the following min-max in the parent selector */
+/* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+
+  
+  
+
