@@ -7,13 +7,17 @@ body { padding: 1rem; }
     margin: 0 auto;
     display: grid;
     gap: 1rem;
+    width: auto;
   }
 
 .section {
   background-color: dodgerblue;
   color: white;
   padding: 1rem;
-  height: 30rem;
+  height: auto;
+  text-align: justify;
+  
+  
 }
 
 /* start of navbar styling */
