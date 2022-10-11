@@ -2,23 +2,28 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="main.css" /> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
+
 <title>Gizmapps MOOC Blog</title>
 </head>
 <body>
     <div class="sections">
         <div class="section">
             <nav class="topnav">
-                <a class="active" href="../personal_blog/index.html"># whoami</a>
-                <a href="#moocs">MOOCS</a>
+                <a id="whoami" class="active"># whoami</a>
+                <a id="moocs">MOOCS</a>
                 <a href="../personal_blog/contact.html">Contact</a>
+                <h2 role="presentation" id="heading-two">My digital Education Story</h2>
             </nav>
         </div>
         <div class="section" id="header">
             <header>
-                <h1>
-                    Gizmapps MOOC blog
+                <h1 id="heading-one">
+                    Gizmapps MOOC blog <span><img id="giz-logo" style="display: inline" src="../personal_blog/graphs/gizlogo.png" alt="gizmapps logo" width="80px" weight="80px"></span>
                 </h1>
-                <aside><h2>My digital Education Story</h2></aside>
+                
             </header>
         </div>
         <div class="section" id="about-edu">
@@ -26,19 +31,25 @@
                 <h3>
                     Hello Learners, 
                 </h3>
-                <p>
-                This blog has to do with online learning via Massive Open Online Courses (MOOCS). Nowadays, lifelong learning is the best way to stay up to date with technology. Self-learning has special importance in terms of acquiring the necessary skills in our contemporary work environment. Some years ago I recognized that there was a potential in MOOCS and non-traditional education, especially if somebody tries to enrich a Curriculum vitae. With high rated specific online courses it is possible to obtain skills equivalent to a Bachelor’s degree or a master’s degree. In addition to MOOC certificates and how somebody can upload them in Linked in and other social media and platforms there is one big fact and the most important: The practical skills that employers love. In my case, my "nukes" in various interviews where the online courses in combination with work experience. A university degree is a proof of academic progress while continuous learning is an indication of personal and professional growth. Generally speaking it is not a good practice to underestimate traditional learning or omit to make an effort to learn something after the degree.    
+                <p id="mooc-info">
+                This blog has to do with online learning via Massive Open Online Courses (MOOCS). Nowadays, lifelong learning is the best way to stay up to date with technology. Self-learning has special importance in terms of acquiring the necessary skills in our contemporary work environment. Some years ago I recognized that there was a potential in MOOCS and non-traditional education, especially if somebody tries to enrich a Curriculum vitae. With high rated specific online courses it is possible to obtain skills equivalent to a Bachelor’s degree or a master’s degree.
+                </p> 
+                <p class="hide" id="mooc-more" role="complementary">In addition to MOOC certificates and how somebody can upload them in Linked in and other social media and platforms there is one big fact and the most important: The practical skills that employers love. In my case, my "nukes" in various interviews where the online courses in combination with work experience. A university degree is a proof of academic progress while continuous learning is an indication of personal and professional growth. Generally speaking it is not a good practice to underestimate traditional learning or omit to make an effort to learn something after the degree.    
                 </p>
+                <button onclick="adminToggle()" id="readmore-btn"  type="button" class="btn btn-success">Read more</button>
+
             </section>
         </div>
-        <div class="section" id="about-me">
+        <div id="about-me" class="section">
             <section class="about-me">
                 <h3># whoami</h3>
-                <h3>$ Odysseas Tigas</h3>
+                <h3 style="display: inline">$ Odysseas Tigas</h3> 
+                <h3 class="blink_me" style="display: inline">_</h3>
+               
                 <p>
                     IT professional with 9+ years’ experience. Currently, I work as Sysadmin at School of Pedagogical and Technological Education, administering, managing and maintaining computer systems and networks.  My Background includes: 
                 </p>
-                <ul>
+                <ul role="presentation">
                     <li>Hands-on experience planning and implementing IT solutions.</li>
                     <li>Troubleshooting computer systems.</li>
                     <li>Optimizing access and utilization of shared information.</li>
@@ -50,10 +61,14 @@
             
         </div>
   
-        <div class="section">
+        <div id="moocsec" class="section">
             <section class="moocs">
-                <h2>MOOCS</h2>
+                <h2>Indicative MOOCS</h2>
                 <ul>
+                  <li id="tcm" onmousedown="mouseDownTcm()" onmouseup="mouseUpTcm()">Practical Ethical Hacking - The Complete Course, TCM Security, Inc. | udemy <img id="tcm-security" src="../personal_blog/graphs/tcm-security.jpg" alt="tcm security certification at udemy" width="450" height="354"></li>
+                  <li id="zsecurity" onmousedown="mouseDownZse()" onmouseup="mouseUpZse()">Learn Python & Ethical Hacking From Scratch, z Security | udemy <img id="z-security" src="../personal_blog/graphs/z-security.jpg" alt="z security certification at udemy" width="450" height="354"></li>
+                  <li id="django">Python and Django Full Stack Web Developer Bootcamp | udemy</li>
+                  <li>Build a Backend REST API with Python & Django - Advanced | udemy</li>
                   <li>Python Programming: Intermediate Course | Dataquest</li>
                   <li>Pandas and Numpy Fundamentals | Dataquest</li>
                   <li>Data Analysis With Pandas: Intermediate Course | Dataquest</li>
@@ -65,22 +80,21 @@
                   <li>Introduction to Big Data Analytics | Coursera</li>
                   <li>Hadoop Platform and Application Framework | Coursera</li>
                   <li>An Introduction to Interactive Programming in Python | Coursera</li>
-                  <li>Python and Django Full Stack Web Developer Bootcamp | udemy</li>
-                  <li>Build a Backend REST API with Python & Django - Advanced | udemy</li>
-                  <li>Practical Ethical Hacking - The Complete Course, TCM Security, Inc. | udemy</li>
-                  <li>Learn Python & Ethical Hacking From Scratch, z Security | udemy</li>
                   <li>TIL V3 - Online course  - Self paced learning | CBT - nuggets</li>
                   <li>Introduction to Descriptive Statistics | Udacity</li>
-
-      
                 </ul>
               </section>
         </div>
-        <div class="section">SIX</div>       
+        <div id="photo" class="section">
+            <img id="it-support" src="../personal_blog/graphs/itsupport.jpg" alt="tigas it support photo">
+            <button id="remove_handler"  type="button" class="btn btn-success">Choose only one Color</button>
+            <p id="output"></p>
+            
+            </div>       
     </div>
-
+    <script type="text/javascript" src="../personal_blog/script.js"></script>
 </body>
-<script> src="script.js"</script>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
